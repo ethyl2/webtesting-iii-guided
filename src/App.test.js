@@ -1,4 +1,5 @@
 import React from 'react';
+import { render, fireEvent } from '@testing-library/react';
 import banana from 'react-test-renderer'; // 1: install this npm module as a dev dependency
 
 import App from './App';
@@ -12,3 +13,11 @@ describe('<App />', () => {
     expect(tree.toJSON()).toMatchSnapshot();
   });
 });
+
+
+/*
+it('renders success test', () => {
+  const {getByText, findByText } = render(<App />);
+  findByText(/success/i);
+})
+*/
